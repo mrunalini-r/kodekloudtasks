@@ -1,0 +1,21 @@
+The Nautilus development team started with new project development. They have created different Git repositories to manage respective project's source code. One of the repositories /opt/games.git was created recently. The team has given us a sample index.html file that is currently present on jump host under /tmp directory. The repository has been cloned at /usr/src/kodekloudrepos on storage server in Stratos DC.
+
+
+
+Copy sample index.html file from jump host to storage server under cloned repository at /usr/src/kodekloudrepos/games, further add/commit the file and push to the master branch.
+// copy the index file to storage server
+sudo scp /tmp/index.html  natasha@ststor01:/tmp
+
+//connect to the storage server
+ssh natasha@ststor01
+
+//switch user
+sudo su
+copy the file
+cp /tmp/index.html  .
+
+git add index.html
+
+git commit -m "add index.html"
+
+git push -u origin master
